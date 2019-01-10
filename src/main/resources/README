@@ -1,0 +1,50 @@
+1. spring-boot is used, in order to run:
+Run>EditConfiguration> new maven run, command line = "spring-boot:run"
+
+2. Install mongodb, cmd:
+  mongo.exe
+  use test;
+  db.createCollection("users");
+
+db.users.insertMany([
+  {
+    "firstName" : "Masha",
+    "lastName" : "Smith",
+    "email" : "e1@mail.ru",
+    "birthDay" : ISODate("2008-08-07")
+  },
+  {
+    "firstName" : "Anna",
+    "lastName" : "Smith",
+    "email" : "e2@mail.ru",
+    "birthDay" : ISODate("2008-08-07")
+  },
+  {
+    "firstName" : "Kata",
+    "lastName" : "Smith",
+    "email" : "e3@mail.ru",
+    "birthDay" : ISODate("2008-08-07")
+  }
+]);
+
+3. I started the FE part, but it is bot completed.
+
+4. So i used postman
+
+POST http://localhost:8080/user/
+
+  {
+
+        "firstName": "Test",
+        "lastName": "Smith",
+        "email": "e1@mail.ru",
+        "birthDay": "Thu Aug 07 04:00:00 MSD 2008"
+    }
+
+GET http://localhost:8080/user/
+
+GET http://localhost:8080/user/e1@mail.ru
+
+DELETE http://localhost:8080/user/e1@mail.ru
+
+DELETE http://localhost:8080/user/
